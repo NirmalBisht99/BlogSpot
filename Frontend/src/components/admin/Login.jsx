@@ -42,12 +42,12 @@ const Login = () => {
              <div className='flex flex-col'>
               <label>Email</label>
               <input onChange={e=>setEmail(e.target.value)} value={email}
-               type="email" required placeholder='Your Email ID' className='border-b-2 border-gray-300 p-2 outline-none mb-6'/>
+               type="email" required placeholder='nirmalbisht2526@gmail.com' className='border-b-2 border-gray-300 p-2 outline-none mb-6'/>
              </div>
 
              <div className='flex flex-col'>
               <label>Password</label>
-              <input  onChange={e=>setPassword(e.target.value)} value={password} type="password" required placeholder='Your Password' className='border-b-2 border-gray-300 p-2 outline-none mb-6'/>
+              <input  onChange={e=>setPassword(e.target.value)} value={password} type="password" required placeholder='NirmalBisht' className='border-b-2 border-gray-300 p-2 outline-none mb-6'/>
              </div>
 
              <button type='submit' className='w-full py-3 font-medium bg-primary text-white rounded cursor-pointer hover:bg-primary/90 transition-all'>Login</button>
