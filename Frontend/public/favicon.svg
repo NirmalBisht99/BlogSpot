@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"></stop>
+      <stop offset="100%" stop-color="#5B21B6"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Background -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGradient)"></rect>
+
+  <!-- Chat Bubble -->
+  <path d="M20 22C20 19.79 21.79 18 24 18H40C42.21 18 44 19.79 44 22V34C44 36.21 42.21 38 40 38H30L24 44V38H24C21.79 38 20 36.21 20 34V22Z" fill="white"></path>
+</svg>

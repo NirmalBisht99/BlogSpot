@@ -1,0 +1,26 @@
+<svg width="260" height="70" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="textGradient" x1="0" y1="0" x2="260" y2="0">
+      <stop offset="0%" stop-color="#6D5DF6"></stop>
+      <stop offset="100%" stop-color="#4A3FF0"></stop>
+    </linearGradient>
+
+    <linearGradient id="iconGradient" x1="0" y1="0" x2="60" y2="60">
+      <stop offset="0%" stop-color="#6D5DF6"></stop>
+      <stop offset="100%" stop-color="#4A3FF0"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Bigger Icon -->
+  <rect x="0" y="10" width="50" height="50" rx="14" fill="url(#iconGradient)"></rect>
+
+  <!-- Chat Bubble -->
+  <path d="M14 24C14 20.6863 16.6863 18 20 18H36C39.3137 18 42 20.6863 42 24V32C42 35.3137 39.3137 38 36 38H26L20 44V38H20C16.6863 38 14 35.3137 14 32V24Z" fill="white"></path>
+
+  <!-- Bigger Text -->
+  <text x="70" y="45" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="600" fill="url(#textGradient)">
+        BlogSpot
+  </text>
+
+</svg>
