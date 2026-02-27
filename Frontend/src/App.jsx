@@ -20,7 +20,7 @@ const App = () => {
       <Toaster />
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/log/:id' element={<Blog/>} />
+        <Route path='/blog/:id' element={<Blog/>} />
     <Route path ='/admin' element={token ?<Layout/> : <Login/>}>
   <Route index element={<Dashboard/>}/>
 
