@@ -1,51 +1,80 @@
-import React ,{ useState} from 'react'
-import { blog_data, blogCategories } from '../assets/assets'
-import {motion} from "motion/react"
+import React, { useState, useMemo } from 'react'
+import { blogCategories } from '../assets/assets'
+import { motion } from "motion/react"
 import BlogCard from './BlogCard'
 import { useAppContext } from '../context/AppContext'
+
 const BlogList = () => {
-  const [menu , setMenu] = useState("All")
-  const {blogs, input} = useAppContext();
+  const [menu, setMenu] = useState("All")
+  const { blogs, input } = useAppContext()
 
-const filteredBlogs = () => {
-  const sourceBlogs =
-    blogs && blogs.length > 0 ? blogs : blog_data;
+  // Filter blogs from DATABASE only
+  const visibleBlogs = useMemo(() => {
+    if (!blogs || blogs.length === 0) return []
 
-  if (input === '') {
-    return sourceBlogs;
-  }
+    let filtered = blogs
 
-  return sourceBlogs.filter(
-    (blog) =>
-      blog.title.toLowerCase().includes(input.toLowerCase()) ||
-      blog.category.toLowerCase().includes(input.toLowerCase())
-  );
-};
+    // Search filter
+    if (input && input.trim() !== "") {
+      filtered = filtered.filter(
+        (blog) =>
+          blog.title.toLowerCase().includes(input.toLowerCase()) ||
+          blog.category.toLowerCase().includes(input.toLowerCase())
+      )
+    }
+
+    // Category filter
+    if (menu !== "All") {
+      filtered = filtered.filter(
+        (blog) => blog.category === menu
+      )
+    }
+
+    return filtered
+  }, [blogs, input, menu])
 
   return (
     <div>
-      <div className='flex justify-center gap-4 sm:gap-8 my-10 relative '>
-      {blogCategories.map((item) => (
-        <div key={item} className='relative'>
-          <button  onClick={() => setMenu(item)}
-          className={`cursor-pointer text-gray-500 ${menu === item && 'text-white px-4 pt-0.5'}`}>
-            {item}
-       {menu === item && (<motion.div layoutId='underline'
-        transition={{type: 'spring' , stiffness : 500 , damping: 30}} className='absolute left-0 right-0 top-0 h-7 -z-1 bg-primary rounded-full'></motion.div>)}
-        
-          </button>
-        </div>      ))}
+      
+      {/* Category Buttons */}
+      <div className='flex justify-center gap-4 sm:gap-8 my-10 relative'>
+        {blogCategories.map((item) => (
+          <div key={item} className='relative'>
+            <button
+              onClick={() => setMenu(item)}
+              className={`cursor-pointer text-gray-500 ${
+                menu === item && 'text-white px-4 pt-0.5'
+              }`}
+            >
+              {item}
 
+              {menu === item && (
+                <motion.div
+                  layoutId='underline'
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  className='absolute left-0 right-0 top-0 h-7 -z-1 bg-primary rounded-full'
+                />
+              )}
+            </button>
+          </div>
+        ))}
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 mx-8 sm:mx-16 xl:mx-40'>
 
-        {/* Blog Card */}
-        {filteredBlogs().filter((blog)=> menu === "All" ? true : blog.category === menu).
-        map((blog) => <BlogCard key={blog._id} blog={blog}/>)}
+      {/* Blog Grid */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 mx-8 sm:mx-16 xl:mx-40'>
+        
+        {visibleBlogs.length === 0 ? (
+          <p className="col-span-full text-center text-gray-500 text-lg">
+            No Blogs Found
+          </p>
+        ) : (
+          visibleBlogs.map((blog) => (
+            <BlogCard key={blog._id} blog={blog} />
+          ))
+        )}
+
       </div>
     </div>
-
-
   )
 }
 
