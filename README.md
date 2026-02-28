@@ -1,4 +1,4 @@
-BlogSpot — AI-Powered Blog Generation Platform
+## BlogSpot — AI-Powered Blog Generation Platform
 
 BlogSpot is a full-stack MERN application that generates complete blog content dynamically using the Gemini API based on a given title. The platform includes secure JWT-based admin authentication, modern UI styling with Tailwind CSS, and cloud-based image management using ImageKit.
 
