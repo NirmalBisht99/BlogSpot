@@ -75,25 +75,15 @@ Module	Responsibility
 🔄 Request Flow (Blog Generation)
 
 Admin logs in using secure credentials
-
 JWT token is generated upon successful authentication
-
 Admin enters a blog title
-
 Frontend sends the title along with JWT token to backend
-
 Backend verifies JWT authentication
-
 Backend sends the title prompt to Gemini API
-
 Gemini generates structured blog content
-
 Backend stores blog content in MongoDB
-
 Blog image is uploaded to ImageKit
-
 Blog data (including image URL) is saved and returned to frontend
-
 Frontend renders the newly created blog
 
 🚀 Getting Started
@@ -153,11 +143,17 @@ Unauthorized users cannot create, update, or delete blogs
 📚 What This Project Demonstrates
 
 ✔ Full-stack MERN development workflow
+
 ✔ AI integration using Gemini API
+
 ✔ Secure JWT authentication system
+
 ✔ Cloud-based media storage with ImageKit
+
 ✔ REST API design and middleware usage
+
 ✔ Secure environment variable handling
+
 ✔ Scalable project structure
 
 
