@@ -54,13 +54,21 @@ The platform integrates:
 ## 🏗 High-Level Architecture
 
 Client (React UI)
+
 ↓
+
 Node.js / Express API
+
 ↓
+
 Gemini API (AI Content Generation)
+
 ↓
+
 MongoDB (Blog Storage)
+
 ↓
+
 ImageKit (Image Storage & CDN)
 
 
@@ -125,10 +133,14 @@ JWT_SECRET=your_jwt_secret_key
 GEMINI_API_KEY=your_gemini_api_key
 
 IMAGEKIT_PUBLIC_KEY=your_public_key
+
 IMAGEKIT_PRIVATE_KEY=your_private_key
+
 IMAGEKIT_URL_ENDPOINT=your_url_endpoint
+
 ▶ Start Backend
 npm run dev
+
 ## 3️⃣ Frontend Setup
 cd ../frontend
 npm install
@@ -161,9 +173,8 @@ Unauthorized users cannot create, update, or delete blogs
 
 This project is built for educational and portfolio purposes.
 
-#👨‍💻 Developed By
-
-## Nirmal Bisht
+## 👨‍💻 Developed By
+Nirmal Bisht
 
 
 
