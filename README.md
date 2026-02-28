@@ -129,11 +129,13 @@ IMAGEKIT_PRIVATE_KEY=your_private_key
 IMAGEKIT_URL_ENDPOINT=your_url_endpoint
 ▶ Start Backend
 npm run dev
-##3️⃣ Frontend Setup
+## 3️⃣ Frontend Setup
 cd ../frontend
 npm install
 npm run dev
-🔐 Authentication Flow
+
+
+## 🔐 Authentication Flow
 
 Admin credentials verified via backend
 
@@ -145,7 +147,7 @@ Middleware protects restricted routes
 
 Unauthorized users cannot create, update, or delete blogs
 
-##📚 What This Project Demonstrates
+## 📚 What This Project Demonstrates
 
 ✔ Full-stack MERN development workflow
 ✔ AI integration using Gemini API
@@ -155,13 +157,13 @@ Unauthorized users cannot create, update, or delete blogs
 ✔ Secure environment variable handling
 ✔ Scalable and modular architecture
 
-📄 License
+## 📄 License
 
 This project is built for educational and portfolio purposes.
 
-👨‍💻 Developed By
+#👨‍💻 Developed By
 
-##Nirmal Bisht
+## Nirmal Bisht
 
 
 
