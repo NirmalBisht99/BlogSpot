@@ -117,13 +117,19 @@ ImageKit (Image Storage & CDN)
 ## 1️⃣ Clone the Repository
 
 git clone https://github.com/NirmalBisht99/BlogSpot.git
+
 cd BlogSpot
 
 ## 2️⃣ Backend Setup
+
 cd backend
+
 npm install
+
 cp .env.example .env
-🔐 Configure .env
+
+## 🔐 Configure .env
+
 PORT=5000
 
 MONGO_URI=your_mongodb_connection_string
@@ -143,7 +149,9 @@ npm run dev
 
 ## 3️⃣ Frontend Setup
 cd ../frontend
+
 npm install
+
 npm run dev
 
 
