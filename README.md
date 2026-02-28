@@ -110,7 +110,8 @@ ImageKit (Image Storage & CDN)
 
 git clone https://github.com/NirmalBisht99/BlogSpot.git
 cd BlogSpot
-2️⃣ Backend Setup
+
+## 2️⃣ Backend Setup
 cd backend
 npm install
 cp .env.example .env
@@ -128,7 +129,7 @@ IMAGEKIT_PRIVATE_KEY=your_private_key
 IMAGEKIT_URL_ENDPOINT=your_url_endpoint
 ▶ Start Backend
 npm run dev
-3️⃣ Frontend Setup
+##3️⃣ Frontend Setup
 cd ../frontend
 npm install
 npm run dev
@@ -144,7 +145,7 @@ Middleware protects restricted routes
 
 Unauthorized users cannot create, update, or delete blogs
 
-📚 What This Project Demonstrates
+##📚 What This Project Demonstrates
 
 ✔ Full-stack MERN development workflow
 ✔ AI integration using Gemini API
@@ -160,7 +161,7 @@ This project is built for educational and portfolio purposes.
 
 👨‍💻 Developed By
 
-Nirmal Bisht
+##Nirmal Bisht
 
 
 
