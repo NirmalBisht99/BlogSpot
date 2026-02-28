@@ -169,12 +169,18 @@ Unauthorized users cannot create, update, or delete blogs
 
 ## 📚 What This Project Demonstrates
 
-✔ Full-stack MERN development workflow
+✔ Full-stack MERN development workflow 
+
 ✔ AI integration using Gemini API
+
 ✔ Secure JWT authentication
+
 ✔ Cloud image management with ImageKit
+
 ✔ REST API design and middleware usage
+
 ✔ Secure environment variable handling
+
 ✔ Scalable and modular architecture
 
 ## 📄 License
