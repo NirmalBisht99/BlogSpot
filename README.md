@@ -108,7 +108,7 @@ ImageKit (Image Storage & CDN)
 
 ## 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/BlogSpot.git
+git clone https://github.com/NirmalBisht99/BlogSpot.git
 cd BlogSpot
 2️⃣ Backend Setup
 cd backend
